@@ -1,5 +1,5 @@
-# usb2serial-autovtg
-USB to serial converter with automatic target voltage detection and buffered IOs
+# USB2serial-AutoVtg
+USB to serial converter with automatic target voltage detection, buffered IOs, 1.8V to 5V support and backflow current protection
 
 # License
 Designed by Benedikt Heinz &lt;hunz at mailbox.org&gt;
