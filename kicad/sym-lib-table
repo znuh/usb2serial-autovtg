@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "ft234xd")(type "Legacy")(uri "${KIPRJMOD}/ft234xd.lib")(options "")(descr ""))
+  (lib (name "ft234_lib")(type "KiCad")(uri "${KIPRJMOD}/ft234_lib.kicad_sym")(options "")(descr ""))
+)
