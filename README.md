@@ -104,7 +104,7 @@ can <b>detect the target IO voltage automatically</b> by deriving it from the ta
 
 This is done with a <a href="https://www.analog.com/en/technical-articles/ltc6244-high-speed-peak-detector.html">
 peak detector circuit</a> based on a common Operational Amplifier (a <a href="https://www.ti.com/product/LMV358A">LMV358A</a>). The automatic detection is designed to work with baud rates ranging from 4800 Baud up to 250kBaud.
-For slower or higher baudrates (and for unidirectional use-cases where the target does not have a Tx signal) 
+For lower or higher baudrates (and for unidirectional use-cases where the target does not have a Tx signal) 
 a regular Vtarget sense pin is also available.
 
 # License
