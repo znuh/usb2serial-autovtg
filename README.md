@@ -82,7 +82,7 @@ This penomenon is called
 <a href="https://e2e.ti.com/blogs_/b/analogwire/posts/back-powering-why-are-the-lights-on-when-the-power-is-off">
 back powering</a>.
 
-The backflow current often exceeds the maximum ratings of the ICs involved. This can permanently damage both the 
+Backflow current often exceeds the maximum ratings of the ICs involved. This can permanently damage both the 
 (expensive) target and the USB to Serial Adapter. Modern 1.8V devices are more prone to permanent damage through
 backflow current because their IOs are significantly less robust than old 5V IOs.<br>
 Suitable IO buffers (such as the <a href="https://assets.nexperia.com/documents/data-sheet/74LVC1G17.pdf">74LVC1G17</a>)
@@ -93,11 +93,15 @@ With these buffers having an unpowered adapter connected to a powered board - an
 ## How does the automatic target voltage detection work?
 Connecting a 3.3V USB to Serial Adapter to a 1.8V target (or a 5V adapter to a 3.3V target) can permanently damage
 the target, because the excessive voltage can result in a high current through the clamping diode and an overvoltage
-on the Vdd supply of the target.<br>
-Therefore buffered USB to Serial Adapters usually have a Vtarget (or Vtg) sense input for the target IO voltage.
-The sense input is used to match the IO voltage of the adapter to the target.<br>
+on the Vdd supply of the target.
+
+Therefore buffered USB to Serial Adapters usually have a Vtarget (or Vtg/Vref) sense input for the target IO voltage.
+The sense input is used to match the IO voltage of the adapter to the target.
 This adapter also has such a Vtarget sense input, but in most cases connecting it is optional, because the adapter
 can <b>detect the target IO voltage automatically</b> by deriving it from the target Tx signal.
+
+![autovtg2](https://github.com/znuh/usb2serial-autovtg/assets/198567/48606e8c-6bbc-486a-ab4a-0f37fbcbb975)
+
 This is done with a <a href="https://www.analog.com/en/technical-articles/ltc6244-high-speed-peak-detector.html">
 peak detector circuit</a> based on a common Operational Amplifier (a <a href="https://www.ti.com/product/LMV358A">LMV358A</a>). The automatic detection is designed to work with baud rates ranging from 4800 Baud up to 250kBaud.
 For slower or higher baudrates (and for unidirectional use-cases where the target does not have a Tx signal) 
