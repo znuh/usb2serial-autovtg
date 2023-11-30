@@ -32,7 +32,7 @@ To address these issues, this adapter uses **[buffered IOs](#backflow_current)**
       <td>
 		  <ul>
 		  <li>4800 Baud - 250kBaud with <a href="#autovtg" class="link-primary">automatic target voltage detection</a></li>
-		  <li>300 Baud - 3000kBaud with target voltage provided through Vtg pin</li>
+		  <li>300 Baud - 3MBaud with target voltage provided through Vtg pin</li>
 		  </ul>
       </td>
     </tr>
