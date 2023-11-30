@@ -67,7 +67,7 @@ To address these issues, this adapter uses **[buffered IOs](#backflow_current)**
 </table>
 
 <a id="backflow_current"></a>
-## Why buffered IOs? What is backflow current protection?
+## What is backflow current protection?
 The most common USB to Serial Adapters have unbuffered IOs. This means the in- and outputs of the converter IC are
 directly connected to the target. When such an adapter is not connected to USB, but to a powered target, current flows
 from the output of the target into the input of the converter IC and to Vdd through the 
