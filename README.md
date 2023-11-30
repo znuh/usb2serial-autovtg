@@ -68,17 +68,20 @@ To address these issues, this adapter uses **[buffered IOs](#backflow_current)**
 
 <a id="backflow_current"></a>
 ## Why buffered IOs? What is backflow current protection?
-The most common USB to Serial Adapters have unbuffered IOs.<br>
-This means the in- and outputs of the converter IC are
+The most common USB to Serial Adapters have unbuffered IOs. This means the in- and outputs of the converter IC are
 directly connected to the target. When such an adapter is not connected to USB, but to a powered target, current flows
 from the output of the target into the input of the converter IC and to Vdd through the 
 <a href="https://electronics.stackexchange.com/questions/179450/power-and-ground-clamp-diodes-in-cmos-io-buffer">
-clamping diode</a>.
+clamping diode</a>.  
+  
+![backflow](https://github.com/znuh/usb2serial-autovtg/assets/198567/0968fbaf-4c8f-41ee-8fd6-8c0b365975ac)  
+  
 The same problem occurs when the USB to Serial Adapter is connected to USB and an unpowered target. Current from the
-converter output flows into the target input and to Vdd of the target through the input clamping diode.<br>
+converter output flows into the target input and to Vdd of the target through the input clamping diode.
 This penomenon is called
 <a href="https://e2e.ti.com/blogs_/b/analogwire/posts/back-powering-why-are-the-lights-on-when-the-power-is-off">
 back powering</a>.
+
 The backflow current often exceeds the maximum ratings of the ICs involved. This can permanently damage both the 
 (expensive) target and the USB to Serial Adapter. Modern 1.8V devices are more prone to permanent damage through
 backflow current because their IOs are significantly less robust than old 5V IOs.<br>
