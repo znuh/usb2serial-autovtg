@@ -110,7 +110,7 @@ The following oscilloscope screenshots show the target TX signal (red) and the r
 Target IO voltage is detected shortly after the first startbit is sent.
 
 ![115k2_1V8_rx_zeroes_rxoff](https://github.com/znuh/usb2serial-autovtg/assets/198567/32e9fe53-4b5e-440c-9f41-3c0f2fe56209)  
-When the target TX signal stays at 0V for a few milliseconds (target is powered off or transmitter shutdown), the recovered IO voltage also drops down to zero.
+When the target TX signal stays at 0V for a few milliseconds (target is powered off or transmitter shutdown), the recovered IO voltage also drops down to zero. (115.2kBaud / 5V measurements can be found [here](https://github.com/znuh/usb2serial-autovtg/issues/2#issuecomment-1837257313).)
 
 # License
 Designed by Benedikt Heinz &lt;hunz at mailbox.org&gt;
