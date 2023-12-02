@@ -100,7 +100,12 @@ The sense input is used to match the IO voltage of the adapter to the target.
 This adapter also has such a Vtarget sense input, but in most cases connecting it is optional, because the adapter
 can <b>detect the target IO voltage automatically</b> by deriving it from the target Tx signal.
 
-![autovtg2](https://github.com/znuh/usb2serial-autovtg/assets/198567/48606e8c-6bbc-486a-ab4a-0f37fbcbb975)
+The following oscilloscope screenshots show the target TX signal (red) and the recovered IO voltage (blue) at 115.2kBaud and 1.8V. The target is sending 0x00 bytes only - the startbits are sufficient to recover the IO voltage.  
+![115k2_1V8_rx_zeroes_rxon](https://github.com/znuh/usb2serial-autovtg/assets/198567/9ae299f1-62ba-4150-a746-452ce0e126de)  
+Target IO voltage is detected shortly after the first startbit is sent.
+
+![115k2_1V8_rx_zeroes_rxoff](https://github.com/znuh/usb2serial-autovtg/assets/198567/32e9fe53-4b5e-440c-9f41-3c0f2fe56209)  
+When the target TX signal stays at 0V for a few milliseconds (target is powered off or transmitter shutdown), the recovered IO voltage also drops down to zero.
 
 This is done with a <a href="https://www.analog.com/en/technical-articles/ltc6244-high-speed-peak-detector.html">
 peak detector circuit</a> based on a common Operational Amplifier (a <a href="https://www.ti.com/product/LMV358A">LMV358A</a>). The automatic detection is designed to work with baud rates ranging from 4800 Baud up to 250kBaud.
