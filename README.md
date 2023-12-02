@@ -100,7 +100,7 @@ The sense input is used to match the IO voltage of the adapter to the target.
 This adapter also has such a Vtarget sense input, but in most cases connecting it is optional, because the adapter
 can <b>detect the target IO voltage automatically</b> by deriving it from the target Tx signal.
 
-The following oscilloscope screenshots show the target TX signal (red) and the recovered IO voltage (blue) at 115.2kBaud and 1.8V. The target is sending 0x00 bytes only - the startbits are sufficient to recover the IO voltage.  
+The following oscilloscope screenshots show the target TX signal (red) and the recovered IO voltage (blue) at 115.2kBaud and 1.8V. The target is sending 0x00 bytes only - the positive startbits are sufficient to recover the IO voltage.  
 ![115k2_1V8_rx_zeroes_rxon](https://github.com/znuh/usb2serial-autovtg/assets/198567/9ae299f1-62ba-4150-a746-452ce0e126de)  
 Target IO voltage is detected shortly after the first startbit is sent.
 
