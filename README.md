@@ -6,8 +6,7 @@ USB to serial adapter with automatic target voltage detection, buffered IOs, 1.8
 This adapter adds several **convenience & protection features** most existing adapters do not have.
 
 I'll use an analogy to explain this: For voltage measurements you can either use a naked analog-to-digital converter (ADC) or a digital multimeter/oscilloscope.
-Digital multimeters/oscilloscopes have analog frontends to support different voltage ranges and take a bit of abuse (i.e. overvoltage, etc.) with no permanent damage, while an ADC by itself does not have these features.
-
+Digital multimeters/oscilloscopes have analog frontends to support different voltage ranges and take a bit of abuse (i.e. overvoltage, etc.) with no permanent damage, while an ADC by itself does not have these features.  
 When it comes to USB to serial converters the situation is similar. The converter chip by itself usually doesn't support multiple voltage ranges and can be damaged by overvoltage and overcurrent.  
 However, an even bigger problem is that adapters can also damage the target system when set to the wrong voltage, or through **backflow current** when connected to an unpowered target. (See [below](#backflow_current) for a detailed explanation.)  
 To address these issues, this adapter uses **[buffered IOs](#backflow_current)** with backflow current protection and **[automatic target voltage detection](autovtg)**.
