@@ -825,69 +825,117 @@
         )
       )
     )
-    (symbol "Diode:BZX84Cxx" (pin_numbers hide) (pin_names hide) (in_bom yes) (on_board yes)
-      (property "Reference" "D" (at 0 3.81 0)
+    (symbol "Logic_LevelTranslator:SN74LVC1T45DCK" (in_bom yes) (on_board yes)
+      (property "Reference" "U" (at -6.35 8.89 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Value" "BZX84Cxx" (at 0 -3.81 0)
-        (effects (font (size 1.27 1.27)))
+      (property "Value" "SN74LVC1T45DCK" (at 3.81 8.89 0)
+        (effects (font (size 1.27 1.27)) (justify left))
       )
-      (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 0 0 0)
+      (property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6" (at 0 -11.43 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Datasheet" "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bzx84c2v4.pdf" (at 0 0 0)
+      (property "Datasheet" "http://www.ti.com/lit/ds/symlink/sn74lvc1t45.pdf" (at -22.86 -16.51 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_keywords" "zener diode" (at 0 0 0)
+      (property "ki_keywords" "Level-Shifter CMOS-TTL-Translation" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "300mW Zener Diode, SOT-23" (at 0 0 0)
+      (property "ki_description" "Single-Bit Dual-Supply Bus Transceiver With Configurable Voltage Translation and 3-State Outputs, SOT-363" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_fp_filters" "SOT?23*" (at 0 0 0)
+      (property "ki_fp_filters" "*SC?70*" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "BZX84Cxx_0_1"
+      (symbol "SN74LVC1T45DCK_0_1"
+        (rectangle (start -7.62 7.62) (end 7.62 -7.62)
+          (stroke (width 0.254) (type default))
+          (fill (type background))
+        )
         (polyline
           (pts
-            (xy 1.27 0)
-            (xy -1.27 0)
+            (xy -2.54 0)
+            (xy -2.54 1.016)
+            (xy -0.762 1.016)
           )
           (stroke (width 0) (type default))
           (fill (type none))
         )
         (polyline
           (pts
-            (xy -1.27 -1.27)
-            (xy -1.27 1.27)
-            (xy -0.762 1.27)
+            (xy 2.794 0)
+            (xy 2.794 -1.016)
+            (xy 1.016 -1.016)
           )
-          (stroke (width 0.254) (type default))
+          (stroke (width 0) (type default))
           (fill (type none))
         )
         (polyline
           (pts
-            (xy 1.27 -1.27)
-            (xy 1.27 1.27)
-            (xy -1.27 0)
-            (xy 1.27 -1.27)
+            (xy -0.762 -1.016)
+            (xy -2.54 -1.016)
+            (xy -2.54 0)
+            (xy -4.572 0)
           )
-          (stroke (width 0.254) (type default))
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -0.762 0)
+            (xy -0.762 2.032)
+            (xy 1.016 1.016)
+            (xy -0.762 0)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 1.016 1.016)
+            (xy 2.794 1.016)
+            (xy 2.794 0)
+            (xy 4.064 0)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 1.016 0)
+            (xy 1.016 -1.778)
+            (xy 1.016 -2.032)
+            (xy -0.762 -1.016)
+            (xy 1.016 0)
+          )
+          (stroke (width 0) (type default))
           (fill (type none))
         )
       )
-      (symbol "BZX84Cxx_1_1"
-        (pin passive line (at 3.81 0 180) (length 2.54)
-          (name "A" (effects (font (size 1.27 1.27))))
+      (symbol "SN74LVC1T45DCK_1_1"
+        (pin power_in line (at -2.54 10.16 270) (length 2.54)
+          (name "VCCA" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
-        (pin no_connect line (at 1.27 0 180) (length 2.54) hide
-          (name "NC" (effects (font (size 1.27 1.27))))
+        (pin power_in line (at 0 -10.16 90) (length 2.54)
+          (name "GND" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at -3.81 0 0) (length 2.54)
-          (name "K" (effects (font (size 1.27 1.27))))
+        (pin bidirectional line (at -10.16 0 0) (length 2.54)
+          (name "A" (effects (font (size 1.27 1.27))))
           (number "3" (effects (font (size 1.27 1.27))))
+        )
+        (pin bidirectional line (at 10.16 0 180) (length 2.54)
+          (name "B" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27))))
+        )
+        (pin input line (at -10.16 -5.08 0) (length 2.54)
+          (name "DIR" (effects (font (size 1.27 1.27))))
+          (number "5" (effects (font (size 1.27 1.27))))
+        )
+        (pin power_in line (at 2.54 10.16 270) (length 2.54)
+          (name "VCCB" (effects (font (size 1.27 1.27))))
+          (number "6" (effects (font (size 1.27 1.27))))
         )
       )
     )
@@ -917,6 +965,57 @@
         (circle (center 0 0) (radius 1.27)
           (stroke (width 0.508) (type default))
           (fill (type background))
+        )
+      )
+    )
+    (symbol "Regulator_Linear:TLV70012_SOT23-5" (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
+      (property "Reference" "U" (at -3.81 5.715 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "TLV70012_SOT23-5" (at 0 5.715 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" (at 0 8.255 0)
+        (effects (font (size 1.27 1.27) italic) hide)
+      )
+      (property "Datasheet" "http://www.ti.com/lit/ds/symlink/tlv700.pdf" (at 0 1.27 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "200mA LDO Regulator Fixed Positive" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "200mA Low Dropout Voltage Regulator, Fixed Output 1.2V, SOT-23-5" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "SOT?23*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "TLV70012_SOT23-5_0_1"
+        (rectangle (start -5.08 4.445) (end 5.08 -5.08)
+          (stroke (width 0.254) (type default))
+          (fill (type background))
+        )
+      )
+      (symbol "TLV70012_SOT23-5_1_1"
+        (pin power_in line (at -7.62 2.54 0) (length 2.54)
+          (name "IN" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin power_in line (at 0 -7.62 90) (length 2.54)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+        (pin input line (at -7.62 0 0) (length 2.54)
+          (name "EN" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))
+        )
+        (pin no_connect line (at 5.08 0 180) (length 2.54) hide
+          (name "NC" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27))))
+        )
+        (pin power_out line (at 7.62 2.54 180) (length 2.54)
+          (name "OUT" (effects (font (size 1.27 1.27))))
+          (number "5" (effects (font (size 1.27 1.27))))
         )
       )
     )
@@ -1166,72 +1265,6 @@
         )
       )
     )
-    (symbol "ft234xd:74LVC1G17" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
-      (property "Reference" "U" (at -2.54 3.81 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "74LVC1G17" (at 0 -3.81 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "Package_SO:TSOP-5_1.65x3.05mm_P0.95mm" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "SOT* SG-*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "74LVC1G17_0_1"
-        (polyline
-          (pts
-            (xy -2.54 0.635)
-            (xy -1.905 0.635)
-            (xy -1.905 -0.635)
-          )
-          (stroke (width 0) (type solid))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy -3.81 2.54)
-            (xy -3.81 -2.54)
-            (xy 2.54 0)
-            (xy -3.81 2.54)
-          )
-          (stroke (width 0.254) (type solid))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy -3.175 0.635)
-            (xy -2.54 0.635)
-            (xy -2.54 -0.635)
-            (xy -1.27 -0.635)
-          )
-          (stroke (width 0) (type solid))
-          (fill (type none))
-        )
-      )
-      (symbol "74LVC1G17_1_1"
-        (pin input line (at -7.62 0 0) (length 3.81)
-          (name "~" (effects (font (size 1.016 1.016))))
-          (number "2" (effects (font (size 1.016 1.016))))
-        )
-        (pin power_in line (at 0 -5.08 90) (length 3.9878)
-          (name "~" (effects (font (size 1.016 1.016))))
-          (number "3" (effects (font (size 1.016 1.016))))
-        )
-        (pin output line (at 6.35 0 180) (length 3.81)
-          (name "~" (effects (font (size 1.016 1.016))))
-          (number "4" (effects (font (size 1.016 1.016))))
-        )
-        (pin power_in line (at 0 5.08 270) (length 3.9878)
-          (name "~" (effects (font (size 1.016 1.016))))
-          (number "5" (effects (font (size 1.016 1.016))))
-        )
-      )
-    )
     (symbol "ft234xd:FT234XD" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
       (property "Reference" "U" (at -11.43 15.24 0)
         (effects (font (size 1.27 1.27)))
@@ -1306,11 +1339,11 @@
         )
       )
     )
-    (symbol "power:+2V5" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+    (symbol "power:+1V2" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (at 0 -3.81 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Value" "+2V5" (at 0 3.556 0)
+      (property "Value" "+1V2" (at 0 3.556 0)
         (effects (font (size 1.27 1.27)))
       )
       (property "Footprint" "" (at 0 0 0)
@@ -1322,10 +1355,10 @@
       (property "ki_keywords" "global power" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "Power symbol creates a global label with name \"+2V5\"" (at 0 0 0)
+      (property "ki_description" "Power symbol creates a global label with name \"+1V2\"" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "+2V5_0_1"
+      (symbol "+1V2_0_1"
         (polyline
           (pts
             (xy -0.762 1.27)
@@ -1351,9 +1384,9 @@
           (fill (type none))
         )
       )
-      (symbol "+2V5_1_1"
+      (symbol "+1V2_1_1"
         (pin power_in line (at 0 0 90) (length 0) hide
-          (name "+2V5" (effects (font (size 1.27 1.27))))
+          (name "+1V2" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
       )
@@ -1556,6 +1589,9 @@
     )
   )
 
+  (junction (at 26.67 26.67) (diameter 0) (color 0 0 0 0)
+    (uuid 05e6e5ee-2e99-40eb-95d1-a018d0ba8dfa)
+  )
   (junction (at 231.14 130.81) (diameter 0) (color 0 0 0 0)
     (uuid 1648027d-5fd3-4432-9e05-69880bfd7c29)
   )
@@ -1565,11 +1601,8 @@
   (junction (at 128.27 85.09) (diameter 0) (color 0 0 0 0)
     (uuid 24463cef-2450-4fe7-87f5-505804292c6d)
   )
-  (junction (at 181.61 137.16) (diameter 0) (color 0 0 0 0)
+  (junction (at 189.23 137.16) (diameter 0) (color 0 0 0 0)
     (uuid 30b67990-fecc-4a73-bdcb-ed5922c47fce)
-  )
-  (junction (at 74.93 40.64) (diameter 0) (color 0 0 0 0)
-    (uuid 39b35cb5-3fb9-4411-a1a3-07e7dea165df)
   )
   (junction (at 86.36 153.67) (diameter 0) (color 0 0 0 0)
     (uuid 3f529262-8474-4261-8e53-abab5b03ad0b)
@@ -1607,6 +1640,12 @@
   (junction (at 88.9 85.09) (diameter 0) (color 0 0 0 0)
     (uuid a1c21f0c-6c51-416e-92ba-d89f067dbf2e)
   )
+  (junction (at 44.45 26.67) (diameter 0) (color 0 0 0 0)
+    (uuid a36742c1-782d-4924-ac4d-251c45a342ca)
+  )
+  (junction (at 166.37 147.32) (diameter 0) (color 0 0 0 0)
+    (uuid ab388059-785f-405c-bf5a-d983c18b3a98)
+  )
   (junction (at 152.4 87.63) (diameter 0) (color 0 0 0 0)
     (uuid bf2cc523-2938-4b58-8457-0faf61e73f66)
   )
@@ -1619,23 +1658,35 @@
   (junction (at 119.38 85.09) (diameter 0) (color 0 0 0 0)
     (uuid c8d2935c-c6be-4099-9fd7-be2fccb078ea)
   )
-  (junction (at 85.09 40.64) (diameter 0) (color 0 0 0 0)
-    (uuid d09181af-5a8e-485e-bb36-10e1933738ab)
+  (junction (at 175.26 100.33) (diameter 0) (color 0 0 0 0)
+    (uuid ee2a9d11-e6db-41e8-89f9-800e240d217b)
   )
 
   (wire (pts (xy 259.08 113.03) (xy 259.08 119.38))
     (stroke (width 0) (type default))
     (uuid 045a8a45-3750-4233-bc9c-41b0251a1507)
   )
+  (wire (pts (xy 26.67 24.13) (xy 26.67 26.67))
+    (stroke (width 0) (type default))
+    (uuid 06da9fd0-fa39-4cdb-bbb3-c45bf65f32ec)
+  )
+  (wire (pts (xy 26.67 26.67) (xy 26.67 29.21))
+    (stroke (width 0) (type default))
+    (uuid 07465810-5342-498b-a6dc-7fcb728d60a5)
+  )
   (wire (pts (xy 123.19 125.73) (xy 123.19 128.27))
     (stroke (width 0) (type default))
     (uuid 0c719919-354e-4fed-b1ab-1501d95da634)
+  )
+  (wire (pts (xy 176.53 137.16) (xy 189.23 137.16))
+    (stroke (width 0) (type default))
+    (uuid 0eb5ca05-201f-4e35-9885-a1e2c9d7a424)
   )
   (wire (pts (xy 80.01 153.67) (xy 86.36 153.67))
     (stroke (width 0) (type default))
     (uuid 0f8bf8f5-de82-4a47-8f54-7fdc4c82d28c)
   )
-  (wire (pts (xy 181.61 130.81) (xy 214.63 130.81))
+  (wire (pts (xy 189.23 130.81) (xy 214.63 130.81))
     (stroke (width 0) (type default))
     (uuid 10f8d054-4875-47ee-906f-10a81e04cbe4)
   )
@@ -1647,7 +1698,7 @@
     (stroke (width 0) (type default))
     (uuid 16f45ac9-b210-460b-88a7-a43ee5170bf1)
   )
-  (wire (pts (xy 156.21 134.62) (xy 156.21 109.22))
+  (wire (pts (xy 156.21 110.49) (xy 156.21 134.62))
     (stroke (width 0) (type default))
     (uuid 18ed9e52-7231-4e2a-a8fd-2250dc8fbb4f)
   )
@@ -1655,15 +1706,11 @@
     (stroke (width 0) (type default))
     (uuid 1cdb1e16-c652-4960-acf0-340eb0f3cae2)
   )
-  (wire (pts (xy 74.93 40.64) (xy 85.09 40.64))
-    (stroke (width 0) (type default))
-    (uuid 1d45d929-0f5e-46aa-88ad-07fc321b7170)
-  )
   (wire (pts (xy 115.57 111.76) (xy 115.57 114.3))
     (stroke (width 0) (type default))
     (uuid 1eb704aa-4edc-43de-b837-8ead5933ee04)
   )
-  (wire (pts (xy 143.51 151.13) (xy 144.78 151.13))
+  (wire (pts (xy 143.51 154.94) (xy 144.78 154.94))
     (stroke (width 0) (type default))
     (uuid 1ed88dd3-8943-4708-bb05-e8cdb1307cfa)
   )
@@ -1687,6 +1734,10 @@
     (stroke (width 0) (type default))
     (uuid 2854f164-5e00-48a1-9f9c-006550468a84)
   )
+  (wire (pts (xy 166.37 147.32) (xy 156.21 147.32))
+    (stroke (width 0) (type default))
+    (uuid 2c2650ee-0cd2-45ed-ae67-e97755906de1)
+  )
   (wire (pts (xy 102.87 33.02) (xy 118.11 33.02))
     (stroke (width 0) (type default))
     (uuid 38fe9bfa-2ad5-46a8-b914-9db9f3a6f319)
@@ -1694,6 +1745,10 @@
   (wire (pts (xy 120.65 154.94) (xy 123.19 154.94))
     (stroke (width 0) (type default))
     (uuid 3aa20857-c38e-4ab6-a622-4943ae4445a6)
+  )
+  (wire (pts (xy 156.21 147.32) (xy 156.21 142.24))
+    (stroke (width 0) (type default))
+    (uuid 3f061bf3-c486-4768-9d62-3c689c96e797)
   )
   (wire (pts (xy 231.14 130.81) (xy 241.3 130.81))
     (stroke (width 0) (type default))
@@ -1719,6 +1774,10 @@
     (stroke (width 0) (type default))
     (uuid 575cb2be-e095-4227-92a5-83fc2db1aece)
   )
+  (wire (pts (xy 167.64 110.49) (xy 156.21 110.49))
+    (stroke (width 0) (type default))
+    (uuid 599061a1-6e2b-415b-bad3-00647e95ac8d)
+  )
   (wire (pts (xy 93.98 140.97) (xy 93.98 143.51))
     (stroke (width 0) (type default))
     (uuid 5a7881e2-afd6-4b17-9d28-e837493f8da6)
@@ -1727,11 +1786,7 @@
     (stroke (width 0) (type default))
     (uuid 5bb43b17-ded1-4603-ab90-583a3f6b2523)
   )
-  (wire (pts (xy 173.99 87.63) (xy 173.99 104.14))
-    (stroke (width 0) (type default))
-    (uuid 5e1fb720-4d48-4ad7-afe0-1d312609d8d7)
-  )
-  (wire (pts (xy 160.02 87.63) (xy 173.99 87.63))
+  (wire (pts (xy 160.02 87.63) (xy 180.34 87.63))
     (stroke (width 0) (type default))
     (uuid 6380568c-25b8-4b6b-8936-0c9cf559ace2)
   )
@@ -1747,7 +1802,11 @@
     (stroke (width 0) (type default))
     (uuid 66c4f724-62a5-4fc0-be3b-370883f4b9b1)
   )
-  (wire (pts (xy 135.89 137.16) (xy 167.64 137.16))
+  (wire (pts (xy 41.91 26.67) (xy 44.45 26.67))
+    (stroke (width 0) (type default))
+    (uuid 682826fe-8336-47ed-8f0a-7e48a512394e)
+  )
+  (wire (pts (xy 135.89 137.16) (xy 156.21 137.16))
     (stroke (width 0) (type default))
     (uuid 6c0d840a-a4e1-461d-86a5-1eac3385f5fc)
   )
@@ -1775,11 +1834,7 @@
     (stroke (width 0) (type default))
     (uuid 7606f567-a9d4-4077-8833-4ae5823b786c)
   )
-  (wire (pts (xy 156.21 109.22) (xy 166.37 109.22))
-    (stroke (width 0) (type default))
-    (uuid 77ee04ac-e582-4d88-93a4-39212ca391f5)
-  )
-  (wire (pts (xy 189.23 137.16) (xy 199.39 137.16))
+  (wire (pts (xy 196.85 137.16) (xy 207.01 137.16))
     (stroke (width 0) (type default))
     (uuid 7c97f74e-1598-4011-8a62-9f06689d3e30)
   )
@@ -1795,7 +1850,7 @@
     (stroke (width 0) (type default))
     (uuid 83c6027a-9ae7-4f2f-9367-b6db77da6bed)
   )
-  (wire (pts (xy 187.96 109.22) (xy 199.39 109.22))
+  (wire (pts (xy 195.58 110.49) (xy 207.01 110.49))
     (stroke (width 0) (type default))
     (uuid 8ac2c79a-6682-4420-b927-3fb74458ba7b)
   )
@@ -1811,6 +1866,10 @@
     (stroke (width 0) (type default))
     (uuid 8e8416b1-7a24-4837-9d30-9dccaa6f0e30)
   )
+  (wire (pts (xy 180.34 87.63) (xy 180.34 100.33))
+    (stroke (width 0) (type default))
+    (uuid 907433b1-5741-4634-ba0a-f1375c570e63)
+  )
   (wire (pts (xy 52.07 114.3) (xy 57.15 114.3))
     (stroke (width 0) (type default))
     (uuid 90ce34f6-2aff-4b34-9554-40a20ebb7351)
@@ -1819,7 +1878,7 @@
     (stroke (width 0) (type default))
     (uuid 9f98d80e-0ec2-4b83-86d1-50ca8b939098)
   )
-  (wire (pts (xy 135.89 146.05) (xy 135.89 151.13))
+  (wire (pts (xy 135.89 146.05) (xy 135.89 154.94))
     (stroke (width 0) (type default))
     (uuid a6e8add0-6ffa-49f4-ae40-c9c11c0bb400)
   )
@@ -1827,9 +1886,13 @@
     (stroke (width 0) (type default))
     (uuid ad958ff6-e21d-4efd-8524-aa23bc3ffea7)
   )
-  (wire (pts (xy 181.61 137.16) (xy 181.61 140.97))
+  (wire (pts (xy 189.23 137.16) (xy 189.23 140.97))
     (stroke (width 0) (type default))
     (uuid ade92144-7d6f-4d55-84a9-b3d4e1032e3c)
+  )
+  (wire (pts (xy 165.1 115.57) (xy 165.1 100.33))
+    (stroke (width 0) (type default))
+    (uuid b229fca7-1e07-4d11-ad8b-d9925e5047c5)
   )
   (wire (pts (xy 93.98 138.43) (xy 106.68 138.43))
     (stroke (width 0) (type default))
@@ -1855,7 +1918,7 @@
     (stroke (width 0) (type default))
     (uuid c870cf60-fa4f-457a-b1a6-eb26c202d54b)
   )
-  (wire (pts (xy 181.61 130.81) (xy 181.61 137.16))
+  (wire (pts (xy 189.23 130.81) (xy 189.23 137.16))
     (stroke (width 0) (type default))
     (uuid cb61d023-d69a-4693-879a-364896fd109f)
   )
@@ -1863,9 +1926,17 @@
     (stroke (width 0) (type default))
     (uuid d454845a-eab4-4add-a901-a65ff6a1ae95)
   )
+  (wire (pts (xy 167.64 115.57) (xy 165.1 115.57))
+    (stroke (width 0) (type default))
+    (uuid d973b2d2-dad0-4dd9-8455-e3b435193a85)
+  )
   (wire (pts (xy 88.9 85.09) (xy 96.52 85.09))
     (stroke (width 0) (type default))
     (uuid dd09f754-2b11-4d3a-a1f5-a455fbd0c903)
+  )
+  (wire (pts (xy 165.1 100.33) (xy 175.26 100.33))
+    (stroke (width 0) (type default))
+    (uuid e196997e-0dba-4952-8647-68c1367f6e6e)
   )
   (wire (pts (xy 137.16 95.25) (xy 137.16 90.17))
     (stroke (width 0) (type default))
@@ -1905,11 +1976,6 @@
     (effects (font (size 1.27 1.27)) (justify left bottom) (href "https://github.com/richardeoin/ftx-prog"))
     (uuid 153824d8-4717-48c4-b7b8-abe413c2747a)
   )
-  (text "TX 74LVC1G17:\n  @Vdd=5V: positive-going threshold: <=2.6V\n  FT234 VddIO: 3.3V"
-    (at 179.07 121.92 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 4066b81d-3da8-4fa9-9404-0284b0a2ea76)
-  )
   (text "BZX84C2V4LT1:\n  I_{ZT}: ~6.5mA => V_{Z}: ~2.5V" (at 53.34 58.42 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 4ab43430-14f6-4f7f-93f8-d3d54bca2601)
@@ -1924,12 +1990,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 8f52cf53-ea8d-489f-8da0-580d01d2b5b6)
   )
-  (text "RX 74LVC1G17:\n  @Vdd=2.5V: positive-going threshold: <=1.5V\n  FT234 VddIO: 3.3V - positive-going threshold: <= 2.0V"
-    (at 187.96 148.59 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid b1eff321-5eed-42ad-944a-4e25223e1a04)
-  )
-  (text "Vtarget range: 1.8V .. ~5.0V" (at 194.31 163.83 0)
+  (text "Vtarget range: 1.2V .. ~5.0V" (at 194.31 163.83 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid f1453996-571f-450a-95bf-6fb0ecaf214a)
   )
@@ -1938,11 +1999,11 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 0555d59a-dcaf-4e00-9893-b6cb359bf567)
   )
-  (label "RXIN" (at 199.39 137.16 180) (fields_autoplaced)
+  (label "RXIN" (at 207.01 137.16 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 853aea19-8a0d-454f-b526-80e02c928cd3)
   )
-  (label "TXOUT" (at 199.39 109.22 180) (fields_autoplaced)
+  (label "TXOUT" (at 207.01 110.49 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 90ad7b44-0f29-47b8-833d-816a20461eb1)
   )
@@ -1984,7 +2045,7 @@
     )
     (pin "1" (uuid c2b0e713-289f-4d54-9208-f26087ae4ff9))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "#PWR01") (unit 1)
         )
@@ -2012,7 +2073,7 @@
     (pin "3" (uuid 572bd4d3-1a7b-4dc6-a496-e69dc062bd29))
     (pin "4" (uuid 5d324422-442a-4c0c-9824-e56011851bf8))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "J2") (unit 1)
         )
@@ -2037,7 +2098,7 @@
     )
     (pin "1" (uuid 137d04a2-c502-4a70-86d4-3fb61e88d7e9))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "#PWR04") (unit 1)
         )
@@ -2045,25 +2106,25 @@
     )
   )
 
-  (symbol (lib_id "Device:R") (at 139.7 151.13 270) (unit 1)
+  (symbol (lib_id "Device:R") (at 139.7 154.94 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-000059cbc039)
-    (property "Reference" "R4" (at 139.7 148.59 90)
+    (property "Reference" "R4" (at 139.7 152.4 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "1k" (at 139.7 151.13 90)
+    (property "Value" "1k" (at 139.7 154.94 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 139.7 149.352 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 139.7 153.162 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 139.7 151.13 0)
+    (property "Datasheet" "" (at 139.7 154.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 76ec3847-a6a2-44bb-a9ff-6cc7e92c265b))
     (pin "2" (uuid 79d3578f-a032-45a1-89d4-3766a3438ae5))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "R4") (unit 1)
         )
@@ -2089,7 +2150,7 @@
     (pin "1" (uuid b62db141-1c85-4092-b616-a4bfc95bdd48))
     (pin "2" (uuid ec71fbb9-3519-4d12-befc-868cceecaba9))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "C3") (unit 1)
         )
@@ -2114,7 +2175,7 @@
     )
     (pin "1" (uuid a22220c4-1063-4850-a7f1-01fde0dc5b55))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "#PWR05") (unit 1)
         )
@@ -2140,7 +2201,7 @@
     (pin "1" (uuid baf4aa19-6925-40ea-934e-b9ee68b98bc5))
     (pin "2" (uuid d9cb8918-23bc-4706-8161-681490e7ab68))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "R1") (unit 1)
         )
@@ -2166,7 +2227,7 @@
     (pin "1" (uuid 105cceed-9739-4af0-ad84-4debb352fee0))
     (pin "2" (uuid 2d26e095-64c9-4a11-8898-01612e57edf5))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "R2") (unit 1)
         )
@@ -2192,7 +2253,7 @@
     (pin "1" (uuid ddf2fd83-e737-4b87-82c2-3f8406db7138))
     (pin "2" (uuid 73547f85-a6d1-4441-b37a-9ff786ba7ae4))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "C2") (unit 1)
         )
@@ -2218,7 +2279,7 @@
     (pin "1" (uuid d6b96367-f2cb-4a35-9b97-115c4ee158c9))
     (pin "2" (uuid bc8c5956-905c-4905-94e5-650f4839f2ef))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "C1") (unit 1)
         )
@@ -2243,7 +2304,7 @@
     )
     (pin "1" (uuid 837a8c93-0f59-47a6-a63c-956247515648))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "#PWR06") (unit 1)
         )
@@ -2251,25 +2312,25 @@
     )
   )
 
-  (symbol (lib_id "Device:LED") (at 148.59 151.13 0) (unit 1)
+  (symbol (lib_id "Device:LED") (at 148.59 154.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-000059cbc8a8)
-    (property "Reference" "D1" (at 148.3614 145.6436 0)
+    (property "Reference" "D1" (at 148.3614 149.4536 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "LED" (at 148.3614 147.955 0)
+    (property "Value" "LED" (at 148.3614 151.765 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "LED_SMD:LED_0603_1608Metric" (at 148.59 151.13 0)
+    (property "Footprint" "LED_SMD:LED_0603_1608Metric" (at 148.59 154.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 148.59 151.13 0)
+    (property "Datasheet" "" (at 148.59 154.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid e2fd0e7e-648d-44e6-b928-b36191c7de3b))
     (pin "2" (uuid 34a63190-eafd-4235-b612-49fdb9023dd4))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "D1") (unit 1)
         )
@@ -2277,24 +2338,24 @@
     )
   )
 
-  (symbol (lib_id "power:+3V3") (at 152.4 151.13 0) (unit 1)
+  (symbol (lib_id "power:+3V3") (at 152.4 154.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-000059cbca7c)
-    (property "Reference" "#PWR07" (at 152.4 154.94 0)
+    (property "Reference" "#PWR07" (at 152.4 158.75 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+3V3" (at 152.781 146.7358 0)
+    (property "Value" "+3V3" (at 152.781 150.5458 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 152.4 151.13 0)
+    (property "Footprint" "" (at 152.4 154.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 152.4 151.13 0)
+    (property "Datasheet" "" (at 152.4 154.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 53426d51-05cf-41f1-86a1-8d242a363e60))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "#PWR07") (unit 1)
         )
@@ -2319,7 +2380,7 @@
     )
     (pin "1" (uuid 2c0bc317-a6fb-4b38-8023-89b1ef230568))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "#PWR08") (unit 1)
         )
@@ -2344,7 +2405,7 @@
     )
     (pin "1" (uuid ec8d5168-af22-42e9-89ff-4e4044ff0649))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "#PWR09") (unit 1)
         )
@@ -2370,7 +2431,7 @@
     (pin "1" (uuid 41f1186b-114e-4b20-a0db-b3fa2cca35c8))
     (pin "2" (uuid 0074574b-be17-4368-b94b-3fc64423a84a))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "C4") (unit 1)
         )
@@ -2395,7 +2456,7 @@
     )
     (pin "1" (uuid 857e9f7f-15d0-43b1-aa7d-9580d787dc0f))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "#PWR010") (unit 1)
         )
@@ -2420,7 +2481,7 @@
     )
     (pin "1" (uuid 284b2daa-1559-462d-a833-4eec1ab46f51))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "#PWR011") (unit 1)
         )
@@ -2445,7 +2506,7 @@
     )
     (pin "1" (uuid 784ffade-1454-45f1-aa03-449147fccdc9))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "#PWR012") (unit 1)
         )
@@ -2470,7 +2531,7 @@
     )
     (pin "1" (uuid 8f53a6c8-4d24-4051-9d50-49e6e7779ee5))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "#PWR014") (unit 1)
         )
@@ -2507,7 +2568,7 @@
     (pin "8" (uuid 25104ce5-593e-4461-8810-ca0c75c68c7b))
     (pin "9" (uuid acee0611-284c-49ee-84da-b3c29df7558c))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "U1") (unit 1)
         )
@@ -2515,80 +2576,27 @@
     )
   )
 
-  (symbol (lib_id "Device:R") (at 185.42 137.16 270) (mirror x) (unit 1)
+  (symbol (lib_id "Device:R") (at 193.04 137.16 270) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-000059f30b2f)
-    (property "Reference" "R5" (at 185.42 139.7 90)
+    (property "Reference" "R5" (at 193.04 139.7 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "120" (at 185.42 137.16 90)
+    (property "Value" "120" (at 193.04 137.16 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 185.42 138.938 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 193.04 138.938 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 185.42 137.16 0)
+    (property "Datasheet" "" (at 193.04 137.16 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 22624872-01a0-47ef-90d6-ed427b706b2f))
     (pin "2" (uuid 6b52e054-d397-45a5-b68e-9148cffe9ff9))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "R5") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "ft234xd:74LVC1G17") (at 173.99 137.16 0) (mirror y) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 00000000-0000-0000-0000-00005c86f42b)
-    (property "Reference" "U3" (at 171.45 133.35 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "74LVC1G17GW" (at 172.72 139.7 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Package_SO:TSOP-5_1.65x3.05mm_P0.95mm" (at 173.99 137.16 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 173.99 137.16 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "2" (uuid 1b3a5e24-2c8e-4cfe-bfc3-f4d119e88468))
-    (pin "3" (uuid 7cb95ced-e2d8-49ff-ad73-ec593746ed41))
-    (pin "4" (uuid 99562f84-564c-4d6d-95b5-bc78bc0f6a65))
-    (pin "5" (uuid ef59c429-6471-4bdc-92a7-2fc998fdf7ab))
-    (instances
-      (project "usb2serial"
-        (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
-          (reference "U3") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 173.99 142.24 0) (mirror y) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 00000000-0000-0000-0000-00005c86f435)
-    (property "Reference" "#PWR0103" (at 173.99 148.59 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 173.863 146.6342 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 173.99 142.24 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 173.99 142.24 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 706b3ae1-7c23-434c-bcdf-67e376e193d4))
-    (instances
-      (project "usb2serial"
-        (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
-          (reference "#PWR0103") (unit 1)
         )
       )
     )
@@ -2611,7 +2619,7 @@
     )
     (pin "1" (uuid 9d68bedf-8200-4be8-8757-be95f056be23))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "#PWR0104") (unit 1)
         )
@@ -2636,7 +2644,7 @@
     )
     (pin "1" (uuid 3fa1e641-5164-454d-bd59-9660ab3ab732))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "#PWR029") (unit 1)
         )
@@ -2661,7 +2669,7 @@
     )
     (pin "1" (uuid 9cb3b8e1-07be-4195-8b5b-df96fe2fa384))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "#PWR013") (unit 1)
         )
@@ -2687,7 +2695,7 @@
     (pin "1" (uuid 81d1d61d-488d-4add-b97f-61c700d53c4f))
     (pin "2" (uuid 7ba34fbc-a458-41e0-abc7-70418019e709))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "R7") (unit 1)
         )
@@ -2713,9 +2721,34 @@
     (pin "1" (uuid 217d4312-9a4b-4b95-ba5f-c7595179ad10))
     (pin "2" (uuid 1f8ab31a-dc87-467c-abfd-c3e8b58f2e52))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "FB1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 34.29 36.83 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 1b860965-165f-4b5f-8f89-d786fec136c4)
+    (property "Reference" "#PWR034" (at 34.29 43.18 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 34.417 41.2242 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 34.29 36.83 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 34.29 36.83 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 3215c4a1-b118-4b38-86d1-6299d9bd809e))
+    (instances
+      (project "usb2serial-autovtg"
+        (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
+          (reference "#PWR034") (unit 1)
         )
       )
     )
@@ -2739,7 +2772,7 @@
     (pin "1" (uuid d48de70f-4830-49e9-8d59-3674c3abfb06))
     (pin "2" (uuid 6822f6e2-53c0-4492-bbfc-854803ca3de0))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "R13") (unit 1)
         )
@@ -2765,7 +2798,7 @@
     (pin "1" (uuid 0d6e7e02-5e82-4bc6-a86b-71d0e8a9b4f3))
     (pin "2" (uuid ec27f53b-2365-4b68-b203-26b9228b4cbb))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "R8") (unit 1)
         )
@@ -2789,7 +2822,7 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "FID1") (unit 1)
         )
@@ -2814,9 +2847,39 @@
     )
     (pin "1" (uuid d82f897c-0dbe-4c17-823f-f74db390257e))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "#PWR028") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Logic_LevelTranslator:SN74LVC1T45DCK") (at 166.37 137.16 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 398408cf-e512-49c9-8c66-8e842c356c69)
+    (property "Reference" "U4" (at 176.53 143.51 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "74LVC1T45GW" (at 173.99 146.05 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6" (at 166.37 148.59 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "http://www.ti.com/lit/ds/symlink/sn74lvc1t45.pdf" (at 143.51 153.67 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "6" (uuid a3bdbaf7-bb6d-4425-b591-a3190d03302a))
+    (pin "4" (uuid 03c467c4-d2e9-476e-a1af-ab90a159a0a2))
+    (pin "3" (uuid d5cfae91-7b07-4427-a3e2-17e27b769e19))
+    (pin "5" (uuid 381982e1-0f9a-49b9-88f6-3e04c8d88e31))
+    (pin "2" (uuid 8db3d456-f500-488c-9663-7f27b110eb1e))
+    (pin "1" (uuid 7c031fa5-9141-49c2-8a4e-ed016487671f))
+    (instances
+      (project "usb2serial-autovtg"
+        (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
+          (reference "U4") (unit 1)
         )
       )
     )
@@ -2840,7 +2903,7 @@
     (pin "1" (uuid d6ff278f-35e5-4dcd-ab12-7461c713e355))
     (pin "2" (uuid 30799555-3455-4e28-9766-2c4af347c013))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "R3") (unit 1)
         )
@@ -2866,7 +2929,7 @@
     (pin "1" (uuid 66a7ce1b-08e0-4680-9ea6-f03b2d837862))
     (pin "2" (uuid e9a3d9d6-d9f5-4790-81c5-16da3864b2a3))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "C6") (unit 1)
         )
@@ -2892,7 +2955,7 @@
     (pin "1" (uuid 15b350c9-6e05-4ac5-91c1-218e1eddf5a9))
     (pin "2" (uuid e798bc57-cf06-472f-9274-16ce1cf17529))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "C10") (unit 1)
         )
@@ -2917,9 +2980,34 @@
     )
     (pin "1" (uuid ca7c64b2-7407-4663-9dae-7c06f0c6ca4f))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "#PWR030") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+1V2") (at 168.91 127 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 50459ceb-31f3-48f6-aeab-29ffaada33d2)
+    (property "Reference" "#PWR026" (at 168.91 130.81 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+1V2" (at 170.18 123.19 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 168.91 127 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 168.91 127 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 40ad4b4b-1849-4690-80e8-8408877a042f))
+    (instances
+      (project "usb2serial-autovtg"
+        (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
+          (reference "#PWR026") (unit 1)
         )
       )
     )
@@ -2942,7 +3030,7 @@
     )
     (pin "1" (uuid d62d0726-ad52-4f98-9649-a88be0b947a2))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "#PWR020") (unit 1)
         )
@@ -2966,7 +3054,7 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "FID3") (unit 1)
         )
@@ -2974,24 +3062,24 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 85.09 48.26 0) (unit 1)
+  (symbol (lib_id "power:GND") (at 44.45 34.29 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 661703cf-627a-4676-8da1-f5a3232ac8a0)
-    (property "Reference" "#PWR015" (at 85.09 54.61 0)
+    (property "Reference" "#PWR015" (at 44.45 40.64 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GND" (at 85.217 52.6542 0)
+    (property "Value" "GND" (at 44.577 38.6842 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 85.09 48.26 0)
+    (property "Footprint" "" (at 44.45 34.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 85.09 48.26 0)
+    (property "Datasheet" "" (at 44.45 34.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 54e342c9-3885-40b1-97b7-c79670cc6a91))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "#PWR015") (unit 1)
         )
@@ -2999,27 +3087,26 @@
     )
   )
 
-  (symbol (lib_id "Device:R") (at 74.93 36.83 0) (mirror x) (unit 1)
+  (symbol (lib_id "power:GND") (at 166.37 147.32 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
-    (uuid 6cf53060-26eb-47a0-88bd-d91d6713bdf0)
-    (property "Reference" "R15" (at 72.39 36.83 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "120" (at 74.93 36.83 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 73.152 36.83 90)
+    (uuid 6966ecb3-a760-46b3-b804-bf137924d645)
+    (property "Reference" "#PWR033" (at 166.37 153.67 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 74.93 36.83 0)
+    (property "Value" "GND" (at 166.497 151.7142 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 166.37 147.32 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid c12838b4-04f4-4984-a472-faa07fa5cd82))
-    (pin "2" (uuid c7a8f3b7-ac87-47ff-9d96-dd6db4e3f02b))
+    (property "Datasheet" "" (at 166.37 147.32 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid edaad155-8c82-44e5-aadc-b7096fe531ca))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
-          (reference "R15") (unit 1)
+          (reference "#PWR033") (unit 1)
         )
       )
     )
@@ -3049,7 +3136,7 @@
     (pin "4" (uuid 109d60f5-0099-4982-bf78-5f35bb058fc3))
     (pin "8" (uuid 6758438b-8021-4065-b094-c14061301b6b))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "U5") (unit 3)
         )
@@ -3074,7 +3161,7 @@
     )
     (pin "1" (uuid b5e2ce4a-8f6f-4b1e-ae5a-9b3fc2caab46))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "#PWR024") (unit 1)
         )
@@ -3100,7 +3187,7 @@
     (pin "1" (uuid 21852247-2d99-4467-927a-bff3eda30860))
     (pin "2" (uuid 11077fa6-5423-4e13-9a7b-71ae11740581))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "C9") (unit 1)
         )
@@ -3108,25 +3195,25 @@
     )
   )
 
-  (symbol (lib_id "Device:C") (at 85.09 44.45 0) (unit 1)
+  (symbol (lib_id "Device:C") (at 44.45 30.48 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7c8fda2a-23e1-434a-9267-88a1d805de4b)
-    (property "Reference" "C5" (at 87.9856 43.2816 0)
+    (property "Reference" "C5" (at 47.3456 29.3116 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "0.1u" (at 87.9856 45.593 0)
+    (property "Value" "1u" (at 47.3456 31.623 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 86.0552 48.26 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 45.4152 34.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 85.09 44.45 0)
+    (property "Datasheet" "" (at 44.45 30.48 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 4c4619ea-d450-4aa5-a157-3aa42e05c912))
     (pin "2" (uuid d837658e-a086-418f-b49d-9bc4a8efbdc7))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "C5") (unit 1)
         )
@@ -3134,49 +3221,24 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 74.93 48.26 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 7e766d8e-da71-4fea-a5f4-70ca6bc6a052)
-    (property "Reference" "#PWR016" (at 74.93 54.61 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 75.057 52.6542 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 74.93 48.26 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 74.93 48.26 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 57834629-62ed-4485-b40d-923c1d08470b))
-    (instances
-      (project "usb2serial"
-        (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
-          (reference "#PWR016") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 181.61 148.59 0) (unit 1)
+  (symbol (lib_id "power:GND") (at 189.23 148.59 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 81b7ffcb-44cb-4fce-9e22-8e983041cb5c)
-    (property "Reference" "#PWR027" (at 181.61 154.94 0)
+    (property "Reference" "#PWR027" (at 189.23 154.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GND" (at 181.737 152.9842 0)
+    (property "Value" "GND" (at 189.357 152.9842 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 181.61 148.59 0)
+    (property "Footprint" "" (at 189.23 148.59 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 181.61 148.59 0)
+    (property "Datasheet" "" (at 189.23 148.59 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 1ec95cce-0a79-4c95-bc53-3d6480be793b))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "#PWR027") (unit 1)
         )
@@ -3201,7 +3263,7 @@
     )
     (pin "1" (uuid 00bebdce-64e5-400a-891a-bfd626034c98))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "#PWR021") (unit 1)
         )
@@ -3209,26 +3271,56 @@
     )
   )
 
-  (symbol (lib_id "power:+3V3") (at 74.93 33.02 0) (unit 1)
+  (symbol (lib_id "power:+3V3") (at 26.67 24.13 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 84eb7891-61bc-4d0b-8097-f5789ae5701f)
-    (property "Reference" "#PWR017" (at 74.93 36.83 0)
+    (property "Reference" "#PWR017" (at 26.67 27.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+3V3" (at 75.311 28.6258 0)
+    (property "Value" "+3V3" (at 26.67 20.32 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 74.93 33.02 0)
+    (property "Footprint" "" (at 26.67 24.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 74.93 33.02 0)
+    (property "Datasheet" "" (at 26.67 24.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 1fbee748-f236-4bcf-a179-806ae342ff63))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "#PWR017") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Logic_LevelTranslator:SN74LVC1T45DCK") (at 177.8 110.49 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 861fba6a-7dc2-4215-a0f5-7aba3d92d619)
+    (property "Reference" "U2" (at 187.96 116.84 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "74LVC1T45GW" (at 185.42 119.38 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6" (at 177.8 121.92 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "http://www.ti.com/lit/ds/symlink/sn74lvc1t45.pdf" (at 154.94 127 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "6" (uuid 8bab3c13-e276-4d99-bd28-dfebf9dfc2a0))
+    (pin "4" (uuid 9abcf9b9-a751-49f4-b39f-c75e9ece5499))
+    (pin "3" (uuid a8a9f639-7994-4fd1-a734-00a0facfa0bb))
+    (pin "5" (uuid 9641fc78-a618-48ea-ac5f-54b2bdef5145))
+    (pin "2" (uuid f62d106a-0308-4ab1-a811-a30fac493631))
+    (pin "1" (uuid 86e63a8e-7eac-46f0-805b-69a56e20fc66))
+    (instances
+      (project "usb2serial-autovtg"
+        (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
+          (reference "U2") (unit 1)
         )
       )
     )
@@ -3252,7 +3344,7 @@
     (pin "1" (uuid 303350f2-584c-4a2b-8a22-23dc9bb44a90))
     (pin "2" (uuid eb222305-043a-4097-beb0-f069e3ea675b))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "C8") (unit 1)
         )
@@ -3278,7 +3370,7 @@
     (pin "1" (uuid f9df5410-e3c6-4402-bf82-94abc2ca45f9))
     (pin "2" (uuid b1795fe3-f40b-46b2-98ae-413c9d658ba1))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "R10") (unit 1)
         )
@@ -3303,7 +3395,7 @@
     )
     (pin "1" (uuid 78180ad9-dd56-4a57-9746-b78bedcb1fcb))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "#PWR025") (unit 1)
         )
@@ -3329,7 +3421,7 @@
     (pin "1" (uuid 93fbe4e8-3d46-497f-a3e1-5698b066c8ea))
     (pin "2" (uuid 121878d8-158c-4d63-a19f-8fcb4f883cb0))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "R9") (unit 1)
         )
@@ -3361,9 +3453,88 @@
     (pin "4" (uuid c03e2068-dbe3-4adb-8f43-4b6c5af30339))
     (pin "8" (uuid 070889e0-c25f-4ed8-9218-9c8e5d45858f))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "U5") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+1V2") (at 44.45 26.67 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid a2eb6811-53d6-43f1-bdae-e314ea9a7d92)
+    (property "Reference" "#PWR03" (at 44.45 30.48 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+1V2" (at 44.45 21.59 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 44.45 26.67 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 44.45 26.67 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 9e19a0e8-4566-4e8f-b6d6-9b1e42560e93))
+    (instances
+      (project "usb2serial-autovtg"
+        (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
+          (reference "#PWR03") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 177.8 120.65 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid ab501144-67ea-44cf-b7e2-57a1265617ed)
+    (property "Reference" "#PWR018" (at 177.8 127 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 177.927 125.0442 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 177.8 120.65 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 177.8 120.65 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 8c63d184-2eed-43ca-aaf7-f3cae5fd266b))
+    (instances
+      (project "usb2serial-autovtg"
+        (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
+          (reference "#PWR018") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Regulator_Linear:TLV70012_SOT23-5") (at 34.29 29.21 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid aead7c00-865a-4d24-95d7-3e93697daca6)
+    (property "Reference" "U7" (at 26.67 34.29 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "TLV74112PDBVR" (at 24.13 36.83 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" (at 34.29 20.955 0)
+      (effects (font (size 1.27 1.27) italic) hide)
+    )
+    (property "Datasheet" "http://www.ti.com/lit/ds/symlink/tlv700.pdf" (at 34.29 27.94 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "5" (uuid 479ec82f-7f71-49da-be19-0fe89c9a2d2a))
+    (pin "4" (uuid 2ea70da4-43d3-4f71-9dcb-1dad44075a26))
+    (pin "1" (uuid c2bb6094-3b71-424b-91ce-fa3b5e3760c7))
+    (pin "2" (uuid 4443e082-8d19-4a95-b592-4e6a56b9b5cb))
+    (pin "3" (uuid aafaf054-7b2d-42f3-8250-a2cce29c5021))
+    (instances
+      (project "usb2serial-autovtg"
+        (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
+          (reference "U7") (unit 1)
         )
       )
     )
@@ -3386,7 +3557,7 @@
     )
     (pin "1" (uuid 5ed73b22-0439-4d1c-8437-6149320a304f))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "#PWR031") (unit 1)
         )
@@ -3411,7 +3582,7 @@
     )
     (pin "1" (uuid 92a912f1-975f-4279-b002-b6531306fa38))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "#PWR019") (unit 1)
         )
@@ -3419,79 +3590,26 @@
     )
   )
 
-  (symbol (lib_id "ft234xd:74LVC1G17") (at 173.99 109.22 0) (unit 1)
+  (symbol (lib_id "power:+3V3") (at 163.83 127 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
-    (uuid b6c87141-85f3-4d28-b243-3a3bfff9ff0e)
-    (property "Reference" "U6" (at 176.53 105.41 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "74LVC1G17GW" (at 175.26 111.76 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Package_SO:TSOP-5_1.65x3.05mm_P0.95mm" (at 173.99 109.22 0)
+    (uuid bcf3a69c-3e04-421a-9686-48bf0685dfd0)
+    (property "Reference" "#PWR016" (at 163.83 130.81 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 173.99 109.22 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "2" (uuid 2bf19174-202f-45b4-bbec-ef87d2bf0cce))
-    (pin "3" (uuid 59642f08-f402-4c5b-9387-67c4a2041610))
-    (pin "4" (uuid 298b80a6-295a-42b9-9b40-62505f20cda4))
-    (pin "5" (uuid 17305b2a-1772-4f19-b423-6fa0d2a638dd))
-    (instances
-      (project "usb2serial"
-        (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
-          (reference "U6") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+2V5") (at 85.09 40.64 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid b908cb95-a566-4dca-a927-62f85bc61064)
-    (property "Reference" "#PWR03" (at 85.09 44.45 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+2V5" (at 85.09 35.56 0)
+    (property "Value" "+3V3" (at 162.56 123.19 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 85.09 40.64 0)
+    (property "Footprint" "" (at 163.83 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 85.09 40.64 0)
+    (property "Datasheet" "" (at 163.83 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f1b2f12b-51f7-470e-bb90-e28d4a2f6371))
+    (pin "1" (uuid 00bdb82d-9906-42a4-b599-a4bd252bc258))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
-          (reference "#PWR03") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+2V5") (at 173.99 132.08 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid bf1e488a-ae02-49c7-9230-17f91847076e)
-    (property "Reference" "#PWR02" (at 173.99 135.89 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+2V5" (at 173.99 128.27 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 173.99 132.08 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 173.99 132.08 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid e5b44593-6f1b-45a7-9cdd-b133e20ca4d3))
-    (instances
-      (project "usb2serial"
-        (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
-          (reference "#PWR02") (unit 1)
+          (reference "#PWR016") (unit 1)
         )
       )
     )
@@ -3515,7 +3633,7 @@
     (pin "1" (uuid b97f17f3-5551-4c1e-935b-58d966fe6b64))
     (pin "2" (uuid 6a851192-359f-45e2-b698-bebffdf9c236))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "R14") (unit 1)
         )
@@ -3541,7 +3659,7 @@
     (pin "1" (uuid 18731184-4abe-43a2-a3e4-795f90960ab4))
     (pin "2" (uuid ff247281-2a99-4616-9683-f2cd4b4e0af2))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "R6") (unit 1)
         )
@@ -3566,7 +3684,7 @@
     )
     (pin "1" (uuid ddbae06e-4e36-4a30-a152-18768ac8d2ce))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "#PWR022") (unit 1)
         )
@@ -3591,9 +3709,34 @@
     )
     (pin "1" (uuid b6212d94-930d-49fc-bb22-321c9b6aace4))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "#PWR023") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3V3") (at 175.26 100.33 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid d15838b3-942e-4795-a09a-859a5f7524a3)
+    (property "Reference" "#PWR02" (at 175.26 104.14 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3V3" (at 175.641 95.9358 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 175.26 100.33 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 175.26 100.33 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 25ed53a8-e2cd-4bf3-9785-d84846db1e51))
+    (instances
+      (project "usb2serial-autovtg"
+        (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
+          (reference "#PWR02") (unit 1)
         )
       )
     )
@@ -3632,36 +3775,9 @@
     (pin "B9" (uuid 8389f96b-27e5-46da-920d-4ff06f90f2ee))
     (pin "S1" (uuid d2ba79fe-7a22-4f99-ab9b-76ebd5db0119))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "J3") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Diode:BZX84Cxx") (at 74.93 44.45 270) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid e711348b-6018-40b9-ac7d-a191f42707a0)
-    (property "Reference" "D4" (at 72.39 43.18 90)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Value" "BZX84C2V4LT1" (at 72.39 45.72 90)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 74.93 44.45 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bzx84c2v4.pdf" (at 74.93 44.45 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 192970e5-a6f4-4e02-a182-ecbd79df5176))
-    (pin "2" (uuid 682cc27d-df55-447f-b29a-037997dd05d5))
-    (pin "3" (uuid a24db266-5743-4603-b088-4f9db0b7d883))
-    (instances
-      (project "usb2serial"
-        (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
-          (reference "D4") (unit 1)
         )
       )
     )
@@ -3683,7 +3799,7 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "FID2") (unit 1)
         )
@@ -3710,7 +3826,7 @@
     (pin "2" (uuid a84281f4-cf3b-4005-9a3d-87e814e18bd0))
     (pin "3" (uuid 1c1fe7e4-6e03-4e77-bd50-f4d5ae56ba17))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "D3") (unit 1)
         )
@@ -3735,7 +3851,7 @@
     )
     (pin "1" (uuid 3ad612b4-fa3a-43c1-ac0b-3ce64ec86d90))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "#PWR032") (unit 1)
         )
@@ -3767,7 +3883,7 @@
     (pin "4" (uuid ee910158-dfe3-4ca8-931b-5cdfb97c3de1))
     (pin "8" (uuid 04869486-b1d8-4fa5-badd-c98505dbedc4))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "U5") (unit 2)
         )
@@ -3775,52 +3891,27 @@
     )
   )
 
-  (symbol (lib_id "Device:R") (at 181.61 144.78 0) (mirror x) (unit 1)
+  (symbol (lib_id "Device:R") (at 189.23 144.78 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid fd53390e-bb4e-4b45-b8be-6fbaf00a525c)
-    (property "Reference" "R12" (at 179.07 144.78 90)
+    (property "Reference" "R12" (at 186.69 144.78 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "270k" (at 181.61 144.78 90)
+    (property "Value" "270k" (at 189.23 144.78 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 179.832 144.78 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 187.452 144.78 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 181.61 144.78 0)
+    (property "Datasheet" "" (at 189.23 144.78 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid f9557c0a-819c-4dd5-a3fc-c1e32a293b84))
     (pin "2" (uuid 69281c06-c35c-4de1-9a04-b3854f1c5552))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "R12") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 173.99 114.3 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid fda57931-0235-4a6e-a8d8-df501bbc2bcf)
-    (property "Reference" "#PWR026" (at 173.99 120.65 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 174.117 118.6942 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 173.99 114.3 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 173.99 114.3 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 4ecb5684-cb65-4240-9a2b-19c36b2a034c))
-    (instances
-      (project "usb2serial"
-        (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
-          (reference "#PWR026") (unit 1)
         )
       )
     )
@@ -3845,7 +3936,7 @@
     (pin "2" (uuid cb48cfc6-63d8-47f8-a4e4-16a63c9730e1))
     (pin "3" (uuid 7608aa0e-4392-46dd-b939-34061f05ca76))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "D2") (unit 1)
         )
@@ -3853,25 +3944,25 @@
     )
   )
 
-  (symbol (lib_id "Device:R") (at 184.15 109.22 270) (unit 1)
+  (symbol (lib_id "Device:R") (at 191.77 110.49 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid fff10102-a90e-49fc-988f-8358cf978c0a)
-    (property "Reference" "R11" (at 184.15 106.68 90)
+    (property "Reference" "R11" (at 191.77 107.95 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "120" (at 184.15 109.22 90)
+    (property "Value" "120" (at 191.77 110.49 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 184.15 107.442 90)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 191.77 108.712 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 184.15 109.22 0)
+    (property "Datasheet" "" (at 191.77 110.49 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 329a1d82-4f52-4479-bcdc-c03e255b3e2e))
     (pin "2" (uuid bfbed0c6-7b07-4e39-b1e2-46cbcb4bec0b))
     (instances
-      (project "usb2serial"
+      (project "usb2serial-autovtg"
         (path "/1f08e041-63eb-4c92-ae2b-bdba754c2965"
           (reference "R11") (unit 1)
         )
