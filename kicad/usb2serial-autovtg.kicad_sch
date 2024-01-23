@@ -1978,6 +1978,10 @@
     (uuid feac88e8-2983-4639-ae4d-402d7d83a9e4)
   )
 
+  (text "DIR HIGH: A to B\nDIR LOW: B to A" (at 189.23 100.33 0)
+    (effects (font (size 1.27 1.27) (thickness 0.254) bold) (justify left bottom))
+    (uuid 0d175b59-1cd7-467d-b999-51a1f405d37b)
+  )
   (text "CBUS0 must be configured for ~{TX&RXLED} during production:\n  Option 1: http://www.ftdichip.com/Support/Utilities.htm#FT_Prog (Windows)\n  Option 2: https://github.com/richardeoin/ftx-prog (Linux)"
     (at 100.33 167.64 0)
     (effects (font (size 1.27 1.27)) (justify left bottom) (href "https://github.com/richardeoin/ftx-prog"))
