@@ -2311,8 +2311,8 @@
   (gr_text "FT234 autoVtg" (at 149.6 84.5) (layer "F.SilkS") (tstamp 58146601-d67c-45aa-a7a1-01acf796b2eb)
     (effects (font (size 1.3 1.3) (thickness 0.25)))
   )
-  (gr_text "IO Voltage: 1.2V to 5V" (at 137.1 68.85) (layer "F.SilkS") (tstamp ff795a70-146a-4801-a0d7-74cf2d621b4b)
-    (effects (font (size 1 1) (thickness 0.2)) (justify left))
+  (gr_text "Vtg: 1.2V-5V" (at 136.3 69.1) (layer "F.SilkS") (tstamp ff795a70-146a-4801-a0d7-74cf2d621b4b)
+    (effects (font (size 0.9 0.9) (thickness 0.2)) (justify left))
   )
 
   (segment (start 143.9 76.8) (end 144.68 76.8) (width 0.25) (layer "F.Cu") (net 1) (tstamp 037054d6-f837-44df-84cb-83fd6b2672bd))
